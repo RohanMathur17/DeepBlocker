@@ -70,3 +70,20 @@ performance and efficacy in the EM domain.
 - Note that to utilize and toggle between the different Word Embedding Vectors which we downloaded, users would be required to change the ```configurations.py``` file. Example for this is -
   - Currently the first line is set to - ```FASTTEXT_EMBEDDIG_PATH = "wiki.tr.bin"```. This can be changed to - ```FASTTEXT_EMBEDDIG_PATH = "wiki.en.bin"``` to utilize English Vectors.
 - Also, if the users want to experiment with multiple ```K value```, the ```main_turk.py``` file can be modified accordingly.
+
+## Run BERT and BERTTurk Models on New Turkish Datasets
+- To run BERT and BERTTurk on the new turkish datasets, user will have to run the following -
+  - ```python3 main_bert.py```
+- Also, if the users want to experiment with multiple ```K value```, the ```main_turk.py``` file can be modified accordingly.
+
+
+
+# Contributors
+- This project is part of the final project for CMPT 984 (Special Topics in Databases), as part of the Spring 2024 Semester at Simon Fraser University.
+  
+| **Name** | **Student ID** | **Email** |
+|--------------|--------------|--------------|
+| Hardev Khandar| 301543441| hmk9@sfu.ca|
+| Rohan Mathur| 301544232| rma135@sfu.ca |
+
+
