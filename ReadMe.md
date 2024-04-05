@@ -83,7 +83,7 @@ performance and efficacy in the EM domain.
   
 | **Name** | **Student ID** | **Email** |
 |--------------|--------------|--------------|
-| Hardev Khandar| 301543441| hmk9@sfu.ca|
+| Hardev Khandhar| 301543441| hmk9@sfu.ca|
 | Rohan Mathur| 301544232| rma135@sfu.ca |
 
 
