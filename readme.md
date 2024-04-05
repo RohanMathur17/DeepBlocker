@@ -70,4 +70,3 @@ performance and efficacy in the EM domain.
 - Note that to utilize and toggle between the different Word Embedding Vectors which we downloaded, users would be required to change the ```configurations.py``` file. Example for this is -
   - Currently the first line is set to - ```FASTTEXT_EMBEDDIG_PATH = "wiki.tr.bin"```. This can be changed to - ```FASTTEXT_EMBEDDIG_PATH = "wiki.en.bin"``` to utilize English Vectors.
 - Also, if the users want to experiment with multiple ```K value```, the ```main_turk.py``` file can be modified accordingly.
-
