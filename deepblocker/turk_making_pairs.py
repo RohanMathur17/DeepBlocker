@@ -6,7 +6,6 @@ def process_and_write_csvs(tableA, tableB):
     Process and merge two CSV files (tableA.csv and tableB.csv) and write the results to new CSV files.
     """
    
-
     # Merge tableA and tableB based on 'Product_Classes' column
     merged_df = pd.merge(tableA[["id","Product_Classes"]], tableB[["id","Product_Classes"]], on="Product_Classes", suffixes=('_1', '_2'))
     merged_df.rename(columns={'id_1': 'product_id_1', 'id_2': 'product_id_2'}, inplace=True)
@@ -27,9 +26,7 @@ def process_and_write_csvs(tableA, tableB):
     result_df.rename(columns={'id_x': 'product_id_1', 'id_y': 'product_id_2'}, inplace=True)
     result_df.drop(columns=['Product_Classes_1','Product_Classes_2'], inplace=True)
 
-
     return merged_df, result_df
-
 
 if len(sys.argv) != 3:
     print("Usage: python3 turk_making_matches.py  <input_file_1> <input_file_2>")

@@ -3,7 +3,6 @@ from transformers import BertTokenizer, BertModel
 import pandas as pd
 from transformers import BertTokenizer, BertModel
 
-
 # Function to tokenize text and obtain BERT embeddings for the entire sentence
 def get_sentence_embeddings(tokenizer, model, text, pooling_method='mean'):
     # Tokenize text
@@ -36,5 +35,3 @@ def do_bert_embeddings(df, column, tokenizer, model):
     numpy_array = sentence_embeddings.numpy()
     
     return numpy_array 
-
-

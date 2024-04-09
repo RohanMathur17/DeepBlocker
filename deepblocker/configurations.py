@@ -1,7 +1,7 @@
 FASTTEXT_EMBEDDIG_PATH = "wiki.tr.bin"
-#Dimension of the word embeddings.
+# Dimension of the word embeddings.
 EMB_DIMENSION_SIZE = 300
-#Embedding size of AutoEncoder embedding
+# Embedding size of AutoEncoder embedding
 AE_EMB_DIMENSION_SIZE = 150
 NUM_EPOCHS = 100
 BATCH_SIZE = 64

@@ -5,11 +5,8 @@ import warnings
 # Ignore all warnings
 warnings.filterwarnings("ignore")
 
-# Your code that might produce warnings
-
 # Reset warnings to default behavior
 warnings.resetwarnings()
-
 
 def split_and_write_csv(input_csv):
     """
@@ -47,14 +44,11 @@ def split_and_write_csv(input_csv):
 
     print("Created TableA.csv!")
     print("Created TableB.csv!")
-
-# Example usage:
     
 if len(sys.argv) != 2:
     print("Usage: python3 split_merged.py  <input_file>")
     sys.exit(1)
 
-#input_csv = "Datasets/Turkish/merged.csv"
 input_file = sys.argv[1]
 
 split_and_write_csv(input_file)

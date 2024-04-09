@@ -1,4 +1,4 @@
-#This file contains a bunch of DL network definitions that are used by the tuple embedding models
+# This file contains a bunch of DL network definitions that are used by the tuple embedding models
 
 import torch
 from torch import nn
@@ -13,7 +13,7 @@ def get_device():
         device = 'cpu'
     return device
 
-#This is a simple dataset for loading numpy matrices
+# This is a simple dataset for loading numpy matrices
 class NumPy_Dataset(Dataset):
     def __init__(self, embedding_matrix):
         self.embedding_matrix = embedding_matrix
@@ -24,7 +24,7 @@ class NumPy_Dataset(Dataset):
     def __len__(self):
         return len(self.embedding_matrix)
 
-#This is used for CTT and Hybrid where you want to load L_e, R_e and y_e
+# This is used for CTT and Hybrid where you want to load L_e, R_e and y_e
 # where L_e and R_e are the numpy matrices for tuple pairs 
 # that are either a perturbation of each other as denoted by y_e
 class NumPy_Triplet_Dataset(Dataset):
@@ -46,7 +46,7 @@ class NumPy_Triplet_Dataset(Dataset):
         return len(self.left_embedding_matrix)
 
 class AutoEncoder(nn.Module):
-    #This model is assumed to be layered
+    # This model is assumed to be layered
     def __init__(self, input_dimension, hidden_dimensions):
         super(AutoEncoder, self).__init__()
         self.encoder = nn.Sequential(
@@ -115,7 +115,7 @@ class AutoEncoderTrainer:
         self.model.eval()
         
 class CTTModel(nn.Module):
-    #This model is assumed to be layered
+    # This model is assumed to be layered
     def __init__(self, input_dimension, hidden_dimensions):
         super(CTTModel, self).__init__()
         self.siamese_summarizer = nn.Sequential(
@@ -124,7 +124,7 @@ class CTTModel(nn.Module):
             nn.Linear(hidden_dimensions[0], hidden_dimensions[1]),
             nn.ReLU(True)
             )
-        #Simple Binary classifier 
+        # Simple Binary classifier 
         self.classifier = nn.Linear(hidden_dimensions[1], 1)
 
 

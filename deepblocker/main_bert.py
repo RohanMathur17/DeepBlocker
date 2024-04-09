@@ -32,7 +32,6 @@ def run_bert(cols_to_block, left_df, right_df, golden_df, bert_tokenizer, bert_m
     print(blocking_utils.compute_blocking_statistics(candidate_set_df, golden_df, left_df, right_df))
     print(candidate_set_df.shape)
 
-
 print("Running English BERT...")
 run_bert(turkish_cols_to_block, left_df, right_df, golden_df, bert_tokenizer, bert_model)
 print("Done English BERT!")
@@ -45,4 +44,3 @@ end_time = time.time()
 
 execution_time = end_time - start_time
 print(f"Execution time: {execution_time} seconds")
-

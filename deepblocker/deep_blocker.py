@@ -1,4 +1,3 @@
-#GiG
 import numpy as np
 import pandas as pd
 from pathlib import Path
@@ -25,7 +24,6 @@ class DeepBlocker:
         check = all([col in self.right_df.columns for col in self.cols_to_block])
         if not check:
             raise Exception("Not all columns in cols_to_block are present in the right dataset")
-
 
     def preprocess_datasets(self):
         self.left_df = self.left_df[self.cols_to_block]
@@ -73,7 +71,6 @@ class DeepBlocker:
     
         return self.candidate_set_df        
         
-
     def block_datasets(self, left_df, right_df, cols_to_block):
         self.left_df = left_df
         self.right_df = right_df
@@ -125,4 +122,3 @@ def query_embeddings_in_batches(model, left_tuple_embeddings, batch_size):
     query_result = np.concatenate(embeddings_list, axis=0)
 
     return query_result
-

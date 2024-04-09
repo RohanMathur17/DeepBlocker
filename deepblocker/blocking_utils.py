@@ -1,7 +1,7 @@
 import pandas as pd
 
 def topK_neighbors_to_candidate_set(topK_neighbors):
-    #We create a data frame corresponding to topK neighbors.
+    # We create a data frame corresponding to topK neighbors.
     # We are given a 2D matrix of the form 1: [a1, a2, a3], 2: [b1, b2, b3]
     # where a1, a2, a3 are the top-3 neighbors for tuple 1 and so on.
     # We will now create a two column DF fo the form (1, a1), (1, a2), (1, a3), (2, b1), (2, b2), (2, b3)
@@ -12,11 +12,11 @@ def topK_neighbors_to_candidate_set(topK_neighbors):
     candidate_set_df = melted_df[["ltable_id", "rtable_id"]]
     return candidate_set_df
 
-#This accepts four inputs:
+# This accepts four inputs:
 # data frames for candidate set and ground truth matches
 # left and right data frames
 def compute_blocking_statistics(candidate_set_df, golden_df, left_df, right_df):
-    #Now we have two data frames with two columns ltable_id and rtable_id
+    # Now we have two data frames with two columns ltable_id and rtable_id
     # If we do an equi-join of these two data frames, we will get the matches that were in the top-K
     merged_df = pd.merge(candidate_set_df, golden_df, on=['ltable_id', 'rtable_id'])
     print("merged_df: ",len(merged_df))
@@ -32,10 +32,9 @@ def compute_blocking_statistics(candidate_set_df, golden_df, left_df, right_df):
 
     return statistics_dict
 
-
-#This function is useful when you download the preprocessed data from DeepMatcher dataset
+# This function is useful when you download the preprocessed data from DeepMatcher dataset
 # and want to convert to matches format.
-#It loads the train/valid/test files, filters the duplicates,
+# It loads the train/valid/test files, filters the duplicates,
 # and saves them to a new file called matches.csv
 def process_files(folder_root):
     df1 = pd.read_csv(folder_root + "/train.csv")

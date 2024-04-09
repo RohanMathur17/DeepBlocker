@@ -4,7 +4,6 @@ import pandas as pd
 import glob
 import sys
 
-
 def create_product_feature_csv(input_directory, input_file, col_name):
     """
     Creates a CSV file containing product features extracted from the given input file.
@@ -33,7 +32,6 @@ def create_product_feature_csv(input_directory, input_file, col_name):
             # Write data to CSV file
             writer.writerow(parts)
 
-
 def process_txt_files(input_directory):
     """
     Process all .txt files in the specified directory and create corresponding CSV files.
@@ -59,8 +57,6 @@ def delete_csv_files(directory):
         directory (str): Path to the directory containing CSV files.
     """
     # Iterate over files in the directory
-
-    
     for filename in os.listdir(directory):
         # Check if the file is a CSV file
         if filename.endswith('.csv'):
@@ -69,9 +65,6 @@ def delete_csv_files(directory):
             # Delete the file
             os.remove(filepath)
             
-
-
-
 def merge_csv_files(input_directory):
     """
     Merge all CSV files in the specified directory based on the 'product_id' column.
@@ -100,7 +93,6 @@ def merge_csv_files(input_directory):
             merged_df = pd.merge(merged_df, df, on='product_id', how='outer')
 
     return merged_df
-
 
 def process(input_directory):
 
@@ -133,7 +125,6 @@ def process(input_directory):
 
     print("MERGED DATASET IS READY -> merged.csv")
     
-
 if len(sys.argv) != 2:
     print("Usage: python script.py <input_directory>")
     sys.exit(1)
@@ -143,5 +134,3 @@ if len(sys.argv) != 2:
 input_directory = sys.argv[1]
 
 process(input_directory)
-
-

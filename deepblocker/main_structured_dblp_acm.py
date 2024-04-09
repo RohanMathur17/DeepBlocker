@@ -35,7 +35,6 @@ dblp_acm_cols_to_block = ['title','authors','venue','year']
 left_df = pd.read_csv("Datasets/Structured/DBLP-ACM-1/tableA.csv", encoding='latin1')
 right_df = pd.read_csv("Datasets/Structured/DBLP-ACM-1/tableB.csv", encoding='latin1')
 
-
 tuple_embedding_model = HybridTupleEmbedding()
 topK_vector_pairing_model = ExactTopKVectorPairing(K=5)
 
@@ -51,4 +50,3 @@ end_time = time.time()
 
 execution_time = end_time - start_time
 print(f"Execution time: {execution_time} seconds")
-

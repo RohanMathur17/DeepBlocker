@@ -76,8 +76,6 @@ performance and efficacy in the EM domain.
   - ```python3 main_bert.py```
 - Also, if the users want to experiment with multiple ```K value```, the ```main_turk.py``` file can be modified accordingly.
 
-
-
 # Contributors
 - This project is part of the final project for CMPT 984 (Special Topics in Databases), as part of the Spring 2024 Semester at Simon Fraser University.
   
@@ -85,5 +83,3 @@ performance and efficacy in the EM domain.
 |--------------|--------------|--------------|
 | Hardev Khandhar| 301543441| hmk9@sfu.ca|
 | Rohan Mathur| 301544232| rma135@sfu.ca |
-
-

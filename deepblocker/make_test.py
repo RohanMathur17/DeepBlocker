@@ -39,7 +39,6 @@ def create_test_csv(product_id_pairs, random_product_id_non_pairs, no_samples):
 
     print("Filtered CSV file created successfully")
 
-
 if len(sys.argv) != 3:
     print("Usage: python3 make_test.py  <input_file_1> <input_file_2>")
     sys.exit(1)
@@ -52,7 +51,6 @@ random_product_id_non_pairs = sys.argv[2]
 print("Reading the input files...")
 product_id_pairs = pd.read_csv(product_id_pairs)
 random_product_id_non_pairs = pd.read_csv(random_product_id_non_pairs)
-
 
 # Call the function to create the test CSV file
 create_test_csv(product_id_pairs, random_product_id_non_pairs, 100)
